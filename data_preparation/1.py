@@ -23,3 +23,12 @@ print("Std Deviation= ", data_scaled.std(axis=0))
 data_scalar_minmax = preprocessing.MinMaxScaler(feature_range=(0,1))
 data_scaled_minmax = data_scalar_minmax.fit_transform(Input_data)
 print("\nMin max scaled data:\n", data_scaled_minmax)
+
+#Normalize data
+#L1 normalization
+data_normalized_l1 = preprocessing.normalize(Input_data, norm='l1')
+print("\nL1 normalized data:\n", data_normalized_l1)
+
+#L2 normalization
+data_normalized_l2 = preprocessing.normalize(Input_data, norm='l2')
+print("\nL2 normalized data:\n", data_normalized_l2)
